@@ -1,62 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en-us">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia Game</title>
-    <!-- Added a link to Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <!-- Added a link to css-->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="assets\css\style.css">
 </head>
 
-<header class="Jumbotron">
-    <h1>Trivia</h1>
-</header>
+<body>
 
-<body class="text-center">
+<!-- DISPLAY TIMER -->
+    <div id="wrapper">
+      <div id="display">00:00</div>
 
-    <div class="container">
-        <div id="display">Display:</div>
-        <div id="start">Start:</div>
-        <div id="stop">Stop:</div>
-        <div id="time-left">Time Left:</div>
-    </div>
-
-    <div id="button" class="container">
+      <div id="buttons">
         <button id="start">Start</button>
         <button id="stop">Stop</button>
         <button id="reset">Reset</button>
+        <button id="lap">Lap</button>
+      </div>
+
+      <div id="laps"></div>
+
     </div>
 
-    <div id="get-question">Question: </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <div id="get-possible-answers">
-        <button id="">A1</button>
-        <button id="">A2</button>
-        <button id="">A3</button>
-        <button id="">A4</button>
-    </div>
+    <script type="text/javascript" src="assets\javascript\app.js"></script>
 
-    <!-- START GAME & GENERATE RANDOM NUMBERS -->
-    <br>
-
-    <div class="text-center">
-
-        <div id="get-correct-answer">Correct Answer</div>
-        <div>
-            <button id="start-game" class="tn btn-secondary btn-lg active">
-                <h3>Play Again</h3>
-            </button>
-    </div>
-
-    <script src=assets\javascript\app.js></script>
-
-</body>
-
-
-
+  </body>
 
 </html>
+

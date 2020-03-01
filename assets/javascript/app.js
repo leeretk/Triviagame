@@ -4,6 +4,8 @@
 
 $(document).ready(function () {
     
+    //------------------------TIMER-------------------------------------------------//   
+
         window.onload = function() {
         $("#lap").on("click", recordLap);
         $("#stop").on("click", stop);
@@ -49,10 +51,17 @@ $(document).ready(function () {
        
         setTimeout(fiveSeconds, 1000 * 5);
         setTimeout(tenSeconds, 1000 * 10);
-        setTimeout(timeUp, 1000 * 15);    
+        setTimeout(timeUp, 1000 * 15);
+
+
+        
+
+ //------------------------QUESTION-------------------------------------------------//   
+
 
         var selectQuestion = function() {
-            "What is Dumbledore?", 
+            if (chooseQuestion === chooseAnswer[01]) {
+                "What is Dumbledore?", 
             
             "What is Hufflepuff?", 
             
@@ -81,7 +90,7 @@ $(document).ready(function () {
 
  $("#start-game").on("click", function reset() {
        
-
+ //------------------------ANSWER-------------------------------------------------//   
 
     correctAnswer = (["Headmaster", "Defense Against the Dark Arts Teacher", "Evil Wizard", "Harry's Father"];
                         ["Mystical Creature", "Hogwarts House", "Spell", "Curse"];
@@ -93,6 +102,9 @@ $(document).ready(function () {
 
     var correctAnswer = indexOf(chooseQuestion.chooseAnswerQ1)    
     
+
+ //------------------------PLAY GAME-------------------------------------------------//   
+
     playGame = function () {
 
         correctAnswer = [
@@ -102,13 +114,17 @@ $(document).ready(function () {
             ["Ron's Ratt", "Harry's Owl", "Hermione's Cat", "Hagrid's Guard Dog"]
         ];
 
-        chosenCategory = categories[Math.floor(Math.random() * categories.length)];
+        chooseAnswer = answer[Math.floor(Math.random() * answer.length)];
         
+        var questionIndex= questions.indexOf(chooseQuestion)
+        var answerIndex = answers.indexOf(chooseAnswer)
+        showAnswer.innerHTML = "Answer: " + answer[questionIndex][answerIndex]
+        console.log(chooseQuestion);
+        console.log(chooseAnswer);
+
         
         word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
         word = word.replace(/\s/g, "-");
-        console.log(word);
-        console.log(guessResult);
         buttons();
         guesses = [];
         lives = 10;
@@ -118,27 +134,14 @@ $(document).ready(function () {
         wins = 0;
         guessResult();
         showLives();
-        selectCategory();
+        chooseQuestion();
         canvas();
         showWins();
         showLosses();
       };
       playGame();
     
-      //**********************CLUES************************  //on click function for hints
-      hint.onclick = function () {
-        hints = [
-          ["Scar", "Elf", "Powerful Wizard", "Always", "Uncle", "Redhead", "Smart", "Werewolf"], //8
-          ["Protects The Goal", "Balls That Attack", "Quaffle", "Snitch", "Catch It ToWin", "Game Played By Wizards"],//6
-          ["Salazar", "Helga", "Godric", "Rowena"],//4
-          ["Sorting Hat", "Fluffy", "Sirius Returns", "Tournament of Champions", "Delores Umbridge", "The Potions Diary", "Wizard War"],//7
-        ];
-        var categoryIndex = categories.indexOf(chosenCategory);
-        var hintIndex = chosenCategory.indexOf(word);
-        showClue.innerHTML = "Clue: " + hints[categoryIndex][hintIndex];
-        console.log(chosenCategory);
-        console.log(hint);
-      };
+
 });//end of
 });
 

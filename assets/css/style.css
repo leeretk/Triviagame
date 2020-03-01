@@ -1,0 +1,86 @@
+/************ IMAGES ******************/
+img {
+    width: 175px;
+    height: 175px;
+  }
+  
+  /************ HEADINGS *****************/
+  
+  header {  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+  
+  h1 {
+        color: white;
+        font-size: 100px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: grey;
+      }
+  
+  h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10px 0;
+    color: white;
+  }
+  
+  h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkblue;
+    background-color: lightgray;
+    max-width: 400px;
+    } 
+  
+  p {
+    font-size: 80px;
+    font-weight: bolder;
+    color: darkblue;
+    background-color: lightgray;
+    max-width: 400px;
+  }
+  
+  /************BUTTON DEFINITIONS ******************/
+  button {
+    margin: 10px;
+  }
+  
+  button:hover {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+   }
+  
+  /************ WRAPPER ******************/
+  
+  #wrapper {
+    /* Box-model */
+    width: 500px;
+  
+    /* Positioning */
+    margin: 50px auto 0;
+  }
+  
+  @media (max-width: 400px) {
+    .myTotals li {
+      padding: 20px;}
+  }
+  
+  @media (max-width: 991.98px) {
+    .body {
+    padding: 25px;}
+  };
+  
+  @media (max-width: 991.98px) {
+    .header {
+      padding: 25px;}
+  };
+  
+  @media (max-width: 991.98px) {
+    .head {
+      padding: 25px;}
+  };
+  
+  @media (width: 100px) {
+    .card { 
+      padding: 25px;}
+  }
+  

@@ -5,10 +5,10 @@ $(document).ready(function () {
     //------------------------TIMER-------------------------------------------------//   
 
         window.onload = function() {
-            $("#lap").on("click", timer.recordLap);
             $("#stop").on("click", timer.stop);
             $("#reset").on("click", timer.reset);
             $("#start").on("click", timer.start);
+            $("#display").on("click",timer);
             };
       
 
@@ -30,24 +30,26 @@ $(document).ready(function () {
             reset = function() {
                 timer.time = 0;
                 timer.lap = 1;
-                
-                $("#laps").text(""); // this will reset the laps to zero
+                $("#reset").on("click", timer.reset);
             };//reset timer and laps
 
             count = function() {
                     intervalId = setInterval(timer.count, 1000); 
                     console.log(setInterval) + lap++;
+                    $("#count").on("click", timer.count);
                 }; //end count
 
             start = function() {
                 if (!timerRunning) {
                     timer.time = setInterval(Increment, 1000)
                     timerRunning = true}
+                    $("#start").on("click", timer.start);
                 }; //end start 
 
             stop = function() {
                 clearInterval(intervalId); 
                 timerRunning = false;
+                $("#stop").on("click", timer.stop);
             };//clear interval     
             
             timeConverter = function(t) {
@@ -58,15 +60,7 @@ $(document).ready(function () {
                     else if (minutes < 10) {minutes = "0" + minutes};
                     return (minutes + ":" + seconds);
             }; //end time converter
-            
-            recordLap = function() {
-                    if (!timerRunning) {
-                    console.log("lap-" + lap + "time complete " + time)
-                    $("#laps").append("<p>Lap " + timer.lap + " : " + converted + "</p>");
-                    var converted = timer.timeConverter(timer.time);
-                    console.log(converted)};//end recorded lap
-            }//end recorded laps 
-    
+   
     };//end timer object 
 
     //-------------------------------------------------------------------------//   
@@ -86,7 +80,6 @@ $(document).ready(function () {
         //setTimeout(tenSeconds, 1000 * 10);
         //setTimeout(timeUp, 1000 * 15);
     
-
     //------------------------QUESTION-------------------------------------------------//   
     
     var question = ["What is Dumbledore?", "What is Hufflepuff?", "Who is Lily?", "Who is Fluffy?"];
@@ -94,7 +87,8 @@ $(document).ready(function () {
     getQuestion = function() {
         question = [Math.floor(Math.random() * correctAnswer.length)];
         console.log(getQuestion);
-             };
+        $("#get-question").text(getCorrectAnswer);
+         };
 
     //------------------------PLAY GAME-------------------------------------------------//   
 

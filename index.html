@@ -1,65 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia Game</title>
     <!-- Added a link to Bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <!-- Added a link to css-->
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Added a link to css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<header class="Jumbotron"> Trivia </header>
+<header class="Jumbotron">
+    <h1>Trivia</h1>
+</header>
 
-<body class="text-center" id="wrapper" >
-    
-        <div id="display">00:00</div>
+<body class="text-center">
 
-        <div id="buttons">
-            <button id="start">Start</button>
-            <button id="stop">Stop</button>
-            <button id="reset">Reset</button>
-            <button id="lap">Lap</button>
-            
-        </div>
-        <div id="time-left"></div>
+    <div class="container">
+        <div id="display">Display:</div>
+        <div id="start">Start:</div>
+        <div id="stop">Stop:</div>
+        <div id="time-left">Time Left:</div>
+    </div>
+
+    <div id="button" class="container">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+    </div>
+
+    <div id="get-question">Question: </div>
+
+    <div id="get-possible-answers">
+        <button id="">A1</button>
+        <button id="">A2</button>
+        <button id="">A3</button>
+        <button id="">A4</button>
+    </div>
+
+    <!-- START GAME & GENERATE RANDOM NUMBERS -->
+    <br>
+
+    <div class="text-center">
+
+        <div id="get-correct-answer">Correct Answer</div>
         <div>
-            <ul>
-                <li>Display:<span   class="Display"></span></li>
-                <li>Laps:<span      class="Laps"></span></li>
-                <li>Time Left:<span class="time-left"></span></li>
-            </ul>
-        </div>
-
-        <div>
-        <!-- Questions -->
-            <ul>
-              <li>Q1:<span  id='Q1'></span></li>
-              <li>Q2:<span  id="Q2"></span></li>
-              <li>Q3:<span  id="Q3"></span></li>
-              <li>Q4:<span  id="Q4"></span></li>
-            </ul> 
-        </div>
-
-        <div>
-            <h2 class="container text-center" id="Questions">Question:</h2>
-            <p class="container" id=""></p> 
-        </div>
-         
-     <!-- GAME BUTTONS Q1 -->
-      <button type="" id="Q1" class="btn btn-primary btn-sm activ"><img src="" alt="Q1"><h3>Q1</h3></button>
-      <button type="" id="Q2"  class="btn btn-primary btn-sm activ"><img src="" alt="Q2"><h3>Q2 </h3></button>
-      <button type="" id="Q3"  class="btn btn-primary btn-sm activ "><img src="" alt="Q3"><h3>Q3</h3></button>
-      <button type="" id="Q4"  class="btn btn-primary btn-sm activ"><img src="" alt="Q4"> <h3>Q4</h3></button>
-   
-
-      <!-- START GAME & GENERATE RANDOM NUMBERS -->
-      <div class="text-center">
-        <button id="start-game" class="tn btn-secondary btn-lg active"><h3>Play Again</h3></button>
-      </div>
-    
+            <button id="start-game" class="tn btn-secondary btn-lg active">
+                <h3>Play Again</h3>
+            </button>
+    </div>
 
     <script src=assets\javascript\app.js></script>
 

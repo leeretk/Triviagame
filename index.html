@@ -4,38 +4,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Stopwatch</title>
+    <title>TRIVIA</title>
     <link rel="stylesheet" href="assets\css\style.css">
 </head>
 
 <body>
 
-<!-- DISPLAY TIMER -->
+    <!-- DISPLAY TIMER -->
     <div id="wrapper">
 
-      <div id="display">00:00</div>
+        <div id="buttons">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+            <button id="lap">Lap</button>
+        </div>
 
-      <div id="buttons">
-        <button id="start">Start</button>
-        <button id="stop">Stop</button>
-        <button id="reset">Reset</button>
-        <button id="lap">Lap</button>
-      </div>
+        <div id="display">00:00</div>
 
-      <div id=laps>include here instead of laps the questions that were answered correctly
-          and incorrectly
-      </div>
 
-      <div id="question">Question: </div>
+        <div id="question">Question: </div>
 
-      <div > Pick 1:
+        <div> Pick 1:
             <ul id="possible-answers">
                 <li id="possible-answer-one"></li>
                 <li id="possible-answer-two"></li>
                 <li id="possible-answer-three"></li>
                 <li id="possible-answer-four"></li>
             </ul>
-      </div>
+        </div>
+
+        <div id="times-up">Time's Up!</div>
+
+        <div id=laps>include here instead of laps the questions that were answered correctly
+            and incorrectly
+        </div>
+
 
 
     </div>
@@ -44,7 +48,6 @@
 
     <script type="text/javascript" src="assets\javascript\app.js"></script>
 
-  </body>
+</body>
 
 </html>
-

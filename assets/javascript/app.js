@@ -1,7 +1,6 @@
 //ensure the code doesn't run until the HTML is finished loading:
 
 
-
 window.onload = function() {
     $("#lap").on("click", recordLap);
     $("#stop").on("click", stop);

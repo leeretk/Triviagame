@@ -10,8 +10,7 @@ $(document).ready(function () {
     var possibleAnswerTwo =document.getElementById("possible-answer-two")
     var possibleAnswerThree =document.getElementById("possible-answer-three")
     var possibleAnswerFour =document.getElementById("possible-answer-four")
-    
-
+   
 
 
     var questions = [
@@ -66,6 +65,11 @@ function start() {
         choices[0]; //value becuase they are on the button.
         
         possibleAnswerTwo.innerHTML= questions[currentQuestion].choices[1];
+
+        possibleAnswerThree.innerHTML= questions[currentQuestion].choices[2];
+
+        possibleAnswerFour.innerHTML= questions[currentQuestion].choices[3];
+
 }
 
 //on click for each button
@@ -107,6 +111,7 @@ function count() {
     time++;
     var converted = timeConverter(time);
     console.log(converted);
+    console.log(count);
     $("#display").text(converted);
 }
   
@@ -120,7 +125,7 @@ function timeConverter(t) {
       minutes = "00";
     }
     else if (minutes < 10) {
-      minutes = "0" + minutes;
+      minutes = "0" + minutes; 
     }
     return minutes + ":" + seconds;
 }

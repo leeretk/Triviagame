@@ -122,7 +122,7 @@ $(document).ready(function () {
         return minutes + ":" + seconds;
     };
 
-    function checkAnswer() {
+    //function checkAnswer() {
         
 
         
@@ -140,4 +140,4 @@ $(document).ready(function () {
         //     }
 
     
-}}});
+}});

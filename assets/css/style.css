@@ -16,8 +16,8 @@ body { /* Visual */
   
   #display {
     font-family: monospace;
-    font-size: 120px;
-    color: green;
+    font-size: 40px;
+    color: blue;
   
     /* Typography */
     text-align: center;

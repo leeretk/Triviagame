@@ -109,3 +109,94 @@
 
         //ctrl KC
 
+// function checkAnswer() {
+
+    //     var correctAnswerCount = 0;
+
+    //     if (possibleAnswerOne === correctAnswer) {
+    //         console.log("You picked the correct answer!" + correctAnswer)
+    //         correctAnswerCount++;
+    //         console.log(correctAnswerCount);
+    //         console.log(possibleAnswerOne);
+    //         console.log(correctAnswer);
+    //         stop();
+    //     } else {
+    //         console.log("Incorrect Answer Try Again!");
+    //         console.log(correctAnswerCount);
+    //         stop();
+    //     }
+
+
+        //         else if(possibleAnswerTwo === correctAnswer) {
+        //             console.log("You picked the correct answer!" + correctAnswer)
+        //             correctAnswerCount++;
+        //             console.log(correctAnswerCount);
+        //         } 
+
+        //         else if (possibleAnswerThree === correctAnswer) {
+        //             console.log("You picked the correct answer!" + correctAnswer)
+        //             correctAnswerCount++;
+        //             console.log(correctAnswerCount);
+        //         }
+
+        //         else if (possibleAnswerFour === correctAnswer) {
+        //             console.log("You picked the correct answer!" + correctAnswer)
+        //             correctAnswerCount++;
+        //             console.log(correctAnswerCount);
+
+
+    //on click for each button
+    //test to see if they are the correct answer
+    //event listeners when the buttons are clicked
+    //when they click is the answer=== correct answer
+
+    //after they make a choice - increment current question++ 
+    //go to next question.  display next question.
+
+    //count the questions answered correctly / incorrectly
+
+}
+
+//  //   function count() {
+//         time++;
+//         var converted = timeConverter(time);
+//         console.log(converted);
+//         console.log(count);
+//         $("#display").text(converted);
+//     }
+
+    // $("#possibleanswer-one").on("click", choices[0]);
+// $("#possibleanswer-two").on("click", choices[1]);
+// $("#possibleanswer-three").on("click", choices[2]);
+// $("#possibleanswer-four").on("click", choices[3]);
+
+// $("#correctanswer-one").on("click", correctAnswer[0]);
+// $("#correctanswer-two").on("click",  correctAnswer[1]);
+// $("#correctanswer-three").on("click",  correctAnswer[2]);
+// $("#correctanswer-four").on("click",  correctAnswer[3]);
+
+
+var questions = [{
+    ques: "What is Dumbledore?",
+    choices: ["Headmaster", "Defense Against the Dark Arts Teacher", "Evil Wizard", "Harry's Father"],
+    correctAnswer: "Headmaster"
+},
+
+{
+    ques: "What is Hufflepuff?",
+    choices: ["Mystical Creature", "Hogwarts House", "Spell", "Curse"],
+    correctAnswer: "Hogwarts House"
+},
+
+{
+    ques: "What is Dumbledore?",
+    choices: ["Headmaster", "Defense Against the Dark Arts Teacher", "Evil Wizard", "Harry's Father"],
+    correctAnswer: "Headmaster"
+},
+
+{
+    ques: "What is Dumbledore?",
+    choices: ["Headmaster", "Defense Against the Dark Arts Teacher", "Evil Wizard", "Harry's Father"],
+    correctAnswer: "Headmaster"
+},
+]

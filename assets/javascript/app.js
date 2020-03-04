@@ -70,9 +70,6 @@ $(document).ready(function () {
         question.innerHTML = questions[currentQuestion].ques;
         console.log(questions[currentQuestion].ques);
 
-        question.innerHTML = questions[currentQuestion].correctAnswer;  
-        console.log(questions[currentQuestion].correctAnswer);
-
     //these are the values that appear in the buttons
         possibleAnswerOne.innerHTML = questions[currentQuestion].choices[0]; 
         possibleAnswerTwo.innerHTML = questions[currentQuestion].choices[1];
@@ -84,6 +81,10 @@ $(document).ready(function () {
         console.log(questions[currentQuestion].choices[1]);
         console.log(questions[currentQuestion].choices[2]);
         console.log(questions[currentQuestion].choices[3]);
+
+        question.innerHTML = questions[currentQuestion].correctAnswer;  
+        console.log(questions[currentQuestion].correctAnswer);
+
         };
 
     function decrement() {
@@ -94,18 +95,23 @@ $(document).ready(function () {
             display.innerHTML = number;
         } else {
             stop();
-            alert("Times Up!");
+            console.log("Times Up!")
+            //alert("Times Up!");
         }
     };
 
     function stop() {
         clearInterval(intervalId);
         timerRunning = false;
-    };
+   };
 
     function recordLap() {
         var converted = timeConverter(time);
         lap++;
+
+        //var newgame
+        //
+        
         $("#laps").append("<p>Lap " + lap + " : " + converted + "</p>");
     };
 
@@ -140,5 +146,5 @@ $(document).ready(function () {
         //         stop();
         //     }
 
-    
+       
 });

@@ -1,42 +1,96 @@
 //ensure the code doesn't run until the HTML is finished loading:
 
+//window.onload = function() 
 
-window.onload = function() {
+$(document).ready(function () {
+    var display =document.getElementById("display")
+    var question =document.getElementById("question")
+    console.log(question)
+    var possibleAnswerOne =document.getElementById("possible-answer-one")
+    var possibleAnswerTwo =document.getElementById("possible-answer-two")
+    var possibleAnswerThree =document.getElementById("possible-answer-three")
+    var possibleAnswerFour =document.getElementById("possible-answer-four")
+    
+
+
+
+    var questions = [
+        {ques: "What is Dumbledore?", 
+        choices: ["Headmaster", "Defense Against the Dark Arts Teacher", "Evil Wizard", "Harry's Father"], 
+        correctAnswer: "Headmaster"}, 
+        
+        {ques: "What is Hufflepuff?", 
+        choices: ["Mystical Creature", "Hogwarts House", "Spell", "Curse"], 
+        correctAnswer: "Hogwarts House"},
+
+        {ques: "What is Dumbledore?", 
+        choices: ["Headmaster", "Defense Against the Dark Arts Teacher", "Evil Wizard", "Harry's Father"], 
+        correctAnswer: "Headmaster"},
+
+        {ques: "What is Dumbledore?", 
+        choices: ["Headmaster", "Defense Against the Dark Arts Teacher", "Evil Wizard", "Harry's Father"], 
+        correctAnswer: "Headmaster"}
+        ]
+
+    display.innertext = "10:00";
     $("#lap").on("click", recordLap);
     $("#stop").on("click", stop);
     $("#reset").on("click", reset);
     $("#start").on("click", start);
-  };
   
 var intervalId;
 var timerRunning = false;
 var time = 0;
 var lap = 1;
 var number = 10;
+var currentQuestion=0;
   
 function reset() {
     time = 0;
     lap = 1;
-    $("#display").text("00:00");
+    display.innerHTML = "10";
     $("#laps").text("");
 }
 
 function start() {
-    if (!timerRunning) {
+    display.innerHTML = "10";
+
+// if (!timerRunning) {}
         clearInterval(intervalId);
-        intervalId = setInterval(decrement, 1000);
-    }
+        intervalId = setInterval(decrement, 1000);       
+        console.log(questions[currentQuestion].ques );
+        question.innerHTML = questions[currentQuestion].ques;
+        console.log(questions[currentQuestion].choices[0]);
+        console.log(possibleAnswerOne);
+        possibleAnswerOne.innerHTML = questions[currentQuestion].
+        choices[0]; //value becuase they are on the button.
+        
+        possibleAnswerTwo.innerHTML= questions[currentQuestion].choices[1];
 }
+
+//on click for each button
+//test to see if they are the correct answer
+//event listeners when the buttons are clicked
+//when they click is the answer=== correct answer
+
+//after they make a choice - increment current question++ 
+//go to next question.  display next question.
+
+//count the questions answered correctly / incorrectly
+
+
 
 function decrement() {
-    number--;
+    if (number > 0) {
+    number--; 
     $("#show-number").html("<h2>" + number + "</h2>");
-}
-
-if (number === 0) {
-    stop();
+    console.log(number);
+    display.innerHTML = number;  
+} else { stop();
     alert("Times Up!");
 }
+}
+
 
 function stop() {
     clearInterval(intervalId);
@@ -70,5 +124,5 @@ function timeConverter(t) {
     }
     return minutes + ":" + seconds;
 }
-
+});
 

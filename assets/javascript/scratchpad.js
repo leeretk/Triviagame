@@ -71,3 +71,41 @@
     // guessResult();
     // showLives();
     // chooseQuestion();
+
+//4 objects (question, choices (array), correct answer) 
+
+    var questions = [
+        {ques: "What is Dumbledore?", 
+        choices: ["Headmaster", "Defense Against the Dark Arts Teacher", "Evil Wizard", "Harry's Father"], 
+        correctAnswer: "Headmaster"}, 
+        
+        {ques: "What is Hufflepuff?", 
+        choices: ["Mystical Creature", "Hogwarts House", "Spell", "Curse"], 
+        correctAnswer: "Hogwarts House"},
+
+        {ques: "What is Dumbledore?", 
+        choices: ["Headmaster", "Defense Against the Dark Arts Teacher", "Evil Wizard", "Harry's Father"], 
+        correctAnswer: "Headmaster"},
+
+        {ques: "What is Dumbledore?", 
+        choices: ["Headmaster", "Defense Against the Dark Arts Teacher", "Evil Wizard", "Harry's Father"], 
+        correctAnswer: "Headmaster"}
+        ]
+
+        // var questions = ["What is Dumbledore?", "What is Hufflepuff?", "Who is Lily?", "Who is Fluffy?"];
+
+        // var possibleAnswers = [
+        //     ["Headmaster", "Defense Against the Dark Arts Teacher", "Evil Wizard", "Harry's Father"]
+        //     ["Mystical Creature", "Hogwarts House", "Spell", "Curse"]
+        //     ["Harry's Aunt", "Snape's Wife", "Harry's Mother", "Headmistress"]
+        //     ["Ron's Ratt", "Harry's Owl", "Hermione's Cat", "Hagrid's Guard Dog"]
+        // ];
+            
+        // var correctAnswer = [
+        //     "Headmaster", "Hogwarts House", "Harry's Mother", 
+        //     "Hagrid's Guard Dog"
+        // ];   
+    
+
+        //ctrl KC
+

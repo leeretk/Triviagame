@@ -8,12 +8,24 @@ body { /* Visual */
     background: black;
   }
 
-  div {
+/*  div {
     font-family: monospace;
     font-size:20px;
     color: green;
-  }
+  }*/
   
+h2 {
+  font-family: monospace;
+  font-size: 150px;
+  color: white;
+
+  /* Typography */
+  text-align: center;
+
+  /* Visual */
+  background: darkblue;
+}
+
   #display {
     font-family: monospace;
     font-size: 40px;
@@ -37,6 +49,7 @@ body { /* Visual */
   #buttons { /* Typography */
     text-align: center;
     color: black;
+    position: center;
   }
   
   button {

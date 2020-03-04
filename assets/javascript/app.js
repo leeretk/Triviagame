@@ -5,6 +5,7 @@
 $(document).ready(function () {
     var display = document.getElementById("display");
     var question = document.getElementById("question");
+    var correctAnswer = document.getElementById("correctAnswer");
     console.log(question);
 
  //   
@@ -65,20 +66,20 @@ $(document).ready(function () {
         display.innerHTML = "10";
         clearInterval(intervalId);
         intervalId = setInterval(decrement, 1000);
-        question.innerHTML = questions[currentQuestion].ques;
 
+        question.innerHTML = questions[currentQuestion].ques;
         console.log(questions[currentQuestion].ques);
+
         question.innerHTML = questions[currentQuestion].correctAnswer;  
-        
+        console.log(questions[currentQuestion].correctAnswer);
+
     //these are the values that appear in the buttons
         possibleAnswerOne.innerHTML = questions[currentQuestion].choices[0]; 
         possibleAnswerTwo.innerHTML = questions[currentQuestion].choices[1];
         possibleAnswerThree.innerHTML = questions[currentQuestion].choices[2];
         possibleAnswerFour.innerHTML = questions[currentQuestion].choices[3];
-
-        
-        console.log(questions[currentQuestion].correctAnswer)
-        
+     
+               
         console.log(questions[currentQuestion].choices[0]);
         console.log(questions[currentQuestion].choices[1]);
         console.log(questions[currentQuestion].choices[2]);
@@ -95,18 +96,18 @@ $(document).ready(function () {
             stop();
             alert("Times Up!");
         }
-    }
+    };
 
     function stop() {
         clearInterval(intervalId);
         timerRunning = false;
-    }
+    };
 
     function recordLap() {
         var converted = timeConverter(time);
         lap++;
         $("#laps").append("<p>Lap " + lap + " : " + converted + "</p>");
-
+    };
 
     function timeConverter(t) {
         var minutes = Math.floor(t / 60);
@@ -140,4 +141,4 @@ $(document).ready(function () {
         //     }
 
     
-}});
+});

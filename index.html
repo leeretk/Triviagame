@@ -12,40 +12,38 @@
 </head>
 
 <header class="jumbotron">
-    <h1  class="text-center">TRIVIA GAME</h1>
+    <h1>TRIVIA GAME</h1>
 </header>
 
 <body>
 
-    <div class="text-center">
-        <button id="start" class="tn btn-secondary btn-lg active">
-          <h3>Play Game</h3>
+    <div>
+        <button id="start">
+            <h3>Play Game</h3>
         </button>
-      </div>
+    </div>
 
     <body>
 
-        <div class="text-center" id="display" class="display"></div>
+        <div id="display"></div>
 
-        <div class="question text-center"><p id="question"></p></div>
+        <div id="question"></div>
 
-        <div class="container possible-answers">
+        <div>
             <div class="row">
                 <div class="col-sm-5">
-                    <div class="card mb-5" style="max-width: 18rem;">
+                    <div class="card border-secondary mb-3" style="height:150px" style="max-width: 18rem;">
                         <div class="card-body">
-                        <p class="p.answers card-text" id="possible-answer-one"></p>
-                            <a href="#" class="btn btn-primary">Q1</a>
+                            <p class="p.answers card-text" id="possible-answer-one"></p>
+                            <button class="btn btn-primary">Q1</button>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-sm-5">
-                    <div class="card text-white bg-dark  mb-3" style="max-width: 18rem;">
-                        <div class="card-body" >
-                           
-                            <p class="card-text"id="possible-answer-two"></p>
-                            <a href="#" class="btn btn-primary">Q2</a>
+                    <div cclass="card border-secondary mb-3" style="height:150px" style="max-width: 18rem;">
+                        <div class="card-body">
+                            <p class="card-text" id="possible-answer-two"></p>
+                            <button class="btn btn-primary">Q1</button>
                         </div>
                     </div>
                 </div>
@@ -53,24 +51,25 @@
 
             <div class="row">
                 <div class="col-sm-5">
-                    <div class="card text-white bg-dark  mb-3" style="max-width: 18rem;">
+                    <div class="card border-secondary mb-3" style="height:150px" style="max-width: 18rem;">
                         <div class="card-body">
-                            <p class="card-text"id="possible-answer-three"></p>
-                            <a href="#" class="btn btn-primary">Q3</a>
+                            <p class="card-text" id="possible-answer-three"></p>
+                            <button class="btn btn-primary">Q1</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-5">
-                    <div class="card text-white bg-dark  mb-3" style="max-width: 18rem;">
+                    <div class="card border-secondary mb-3" style="height:150px" style="max-width: 18rem;">
                         <div class="card-body">
-                          <p class="card-text" id="possible-answer-four"><p>
-                          <a href="#" type="button" class="btn btn-primary">Q4</a>
+                            <p class="card-text" id="possible-answer-four">
+                                <p>
+                                    <button class="btn btn-primary">Q1</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        </div>
         <div class="container">
             <div id="correct-answer-one"></div>
             <div id="correct-answer-two"></div>

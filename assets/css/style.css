@@ -1,84 +1,147 @@
-/************ IMAGES ******************/
-img {
-    width: 175px;
-    height: 175px;
+header {  
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #7f0909;
+  color: #ffc500;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
   }
-  
-body { /* Visual */
-    background: black;
-  }
-
-/*  div {
-    font-family: monospace;
-    font-size:20px;
-    color: green;
-  }*/
     
 h1 {
-  font-family: monospace;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 150px;
   color: red;
   text-align: center;
   background: darkblue;}
 
 h2 {
-  font-family: monospace;
-  font-size: 150px;
-  color: white;
-  /* Typography */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 75px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   text-align: center;
-  /* Visual */
-  background: darkblue;
 }
 
-  #display {
-    font-family: monospace;
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  color: white;
+  text-align: center;
+  background:  #ffc500;
+}
+
+#display {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
-    color: blue;
-  
-    /* Typography */
+    color: #ffc500;
     text-align: center;
-  
-    /* Visual */
     background: black;
   }
+ 
+#question {
+    font-size: 50px;
+      font-weight: normal;
+      color: white;
+      background-color: ffc500;
+      }
   
-  #wrapper {
-    /* Box-model */
-    width: 500px;
-  
-    /* Positioning */
-    margin: 50px auto 0;
+#possible-answers {
+    font-size: 50px;
+    text-align: left;
+    display: inline-block;
+    padding: 10px;
   }
-  
-  #buttons { /* Typography */
+
+.body-wrapper {
+    background: gray;
+    color:#ffc500 ;
+    height: 100%;
     text-align: center;
-    color: black;
-    position: center;
+    }
+  
+body {
+  background: gray;
+  color:#ffc500 ;
+  height: 100%;
+  text-align: center;
   }
-  
-  button {
-    width: 100px;
-  
-    /* Box-model */
-    height: 50px;
+
+  p {
+    font-size: 25px;
+    font-weight: normal;
+    color: gray;
   }
-  
-  #laps {
+
+  /*was laps*/
+
+  #questionResults { 
     width: 100%;
     height: 200px;
-  
-    /* Positioning */
     margin-top: 20px;
-  
-    /* Box-model */
     overflow: auto;
-  
-    /* Typography */
     text-align: center;
-  
-    /* Visual */
-    background: white;
+    background: dimgray;
+    float: center;
   }
   
-  @media (min-width: 992px) { ... }
+
+/******************************/
+
+.active {
+  cursor:default;
+}
+
+/* .active:hover {
+  -moz-transition: all 1s ease-in;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -moz-transition: all 1s ease-in;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+} */
+
+/************BUTTON DEFINITIONS ******************/
+
+#buttons {
+  text-align: left;
+  color:gray;
+  position: center;
+}
+
+button {
+  position: left;
+  color: white;
+  background:#7f0909 ;
+  columns: #ffc500;;
+  width: 100px;
+  height: 50px;
+}
+
+button:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: grey;
+  border: solid 1px #fff;
+  color: #ffc500 ;
+}
+
+
+/************ IMAGES ******************/
+img {
+  width: 175px;
+  height: 175px;
+}
+/*****************************/
+
+@media (min-width:992px)
+    {
+        .container{width:960px}
+    }
+@media (min-width:1200px)
+    {
+        .container{width:960px}
+    }
+  

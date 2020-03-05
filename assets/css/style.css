@@ -81,4 +81,4 @@ h2 {
     background: white;
   }
   
-  
+  @media (min-width: 992px) { ... }

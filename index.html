@@ -17,23 +17,56 @@
 
 <body>
     <div class="center-text" id="buttons btn-group btn-group-lg">
-            <button id="start">Play Game</button>
+        <button id="start">Play Game</button>
     </div>
-    
 
-    <body>
 
+    <body class="center-text">
         <div id="display"></div>
 
-        <div id="question" class="jumbotron">
-            <h2>Question</h2>
-        </div>
+        <div class="center-text"><p id="question"></p></div>
 
-        <div class="container" id="possible-answers">
-            <button class="btn btn-primary" type="submit" id="possible-answer-one"></button>
-            <button class="btn btn-primary" type="submit" id="possible-answer-two"></button>
-            <button class="btn btn-primary" type="submit" id="possible-answer-three"></button>
-            <button class="btn btn-primary" type="submit" id="possible-answer-four"></button>
+        <div class="container center-text">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="card">
+                        <div class="card-body">
+                        
+                            <p class="card-text" id="possible-answer-one"></p>
+                            <a href="#" class="btn btn-primary">Submit</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="card">
+                        <div class="card-body" >
+                           
+                            <p class="card-text"id="possible-answer-two"></p>
+                            <a href="#" class="btn btn-primary">Submit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text"id="possible-answer-three"></p>
+                            <a href="#" class="btn btn-primary">Submit</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="card">
+                        <div class="card-body">
+                          <p class="card-text" id="possible-answer-four"><p>
+                          <a href="#" class="btn btn-primary">Submit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="container">
@@ -48,7 +81,7 @@
         <div id="laps">include here instead of laps the questions that were answered correctly
             and incorrectly</div>
 
-        <div id="container buttons btn-group btn-group-lg">
+        <div id="center-text container">
             <button id="stop">Stop</button>
             <button id="reset">Reset</button>
             <button id="lap">Lap</button>

@@ -13,15 +13,20 @@ body { /* Visual */
     font-size:20px;
     color: green;
   }*/
-  
+    
+h1 {
+  font-family: monospace;
+  font-size: 150px;
+  color: red;
+  text-align: center;
+  background: darkblue;}
+
 h2 {
   font-family: monospace;
   font-size: 150px;
   color: white;
-
   /* Typography */
   text-align: center;
-
   /* Visual */
   background: darkblue;
 }

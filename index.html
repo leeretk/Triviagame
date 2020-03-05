@@ -8,71 +8,54 @@
     <link rel="stylesheet" href="assets\css\style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
-<header class="center-text jumbotron jumbotron-fluid">
+<header class="jumbotron">
     <h1>TRIVIA GAME</h1>
 </header>
 
 <body>
-
-    <!-- DISPLAY TIMER -->
-
     <div class="center-text" id="buttons btn-group btn-group-lg">
-        <button id="start">Play Game</button>
+            <button id="start">Play Game</button>
     </div>
-<br>
-<br>
-
-    <div id="display"></div>
-
-    <br>
-    <br>
     
-    <div id="question"><h2>Question</h2></div>
 
-    <br>
-    <br>
-    
-    <div class="container" id="possible-answers">
-        <button class="btn btn-primary" type="submit" id="possible-answer-one"></button>
-        <button class="btn btn-primary" type="submit" id="possible-answer-two"></button>
-        <button class="btn btn-primary" type="submit" id="possible-answer-three"></button>
-        <button class="btn btn-primary" type="submit" id="possible-answer-four"></button>
-    </div>
-    <br>
-    <br>
-    
-    <div>
-        <div id="correct-answer-one">
-            <div id="correct-answer-two">
-                <div id="correct-answer-three">
-                    <div id="correct-answer-four">
-                    </div>
+    <body>
 
-                    <div class="alert alert-danger" role="alert" id="times-up">
-                        <h3></h3>
-                    </div>
+        <div id="display"></div>
 
-                </div>
-                <div id="laps">include here instead of laps the questions that were answered correctly
-                    and incorrectly
-                </div>
+        <div id="question" class="jumbotron">
+            <h2>Question</h2>
+        </div>
 
-                <div id="container">
-                    <div id="buttons btn-group btn-group-lg">
-                        <button id="stop">Stop</button>
-                        <button id="reset">Reset</button>
-                        <button id="lap">Lap</button>
-                    </div>
+        <div class="container" id="possible-answers">
+            <button class="btn btn-primary" type="submit" id="possible-answer-one"></button>
+            <button class="btn btn-primary" type="submit" id="possible-answer-two"></button>
+            <button class="btn btn-primary" type="submit" id="possible-answer-three"></button>
+            <button class="btn btn-primary" type="submit" id="possible-answer-four"></button>
+        </div>
 
-                </div>
+        <div class="container">
+            <div id="correct-answer-one"></div>
+            <div id="correct-answer-two"></div>
+            <div id="correct-answer-three"></div>
+            <div id="correct-answer-four"></div>
+        </div>
 
-                <script type="text/javascript"
-                    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <div class="container alert alert-danger" role="alert" id="times-up"></div>
 
-                <script type="text/javascript" src="assets\javascript\app.js"></script>
+        <div id="laps">include here instead of laps the questions that were answered correctly
+            and incorrectly</div>
 
-</body>
+        <div id="container buttons btn-group btn-group-lg">
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+            <button id="lap">Lap</button>
+        </div>
+
+        <script type="text/javascript" src="assets\javascript\app.js"></script>
+
+    </body>
 
 </html>

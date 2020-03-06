@@ -58,8 +58,13 @@ $(document).ready(function () {
         //current Question - Correct Answer
         questionArray.innerHTML = questionArray[currentQuestion].correctAnswer;
         console.log("Correct Answer: " + questionArray[currentQuestion].correctAnswer);
-
     };
+
+
+    function nextquestion() { 
+        $("#next-question").on("click", questionArray[currentQuestion].ques++);
+        console.log("Next Question :" + questionArray[currentQuestion].ques++);
+    }
 
     function stop() {
         clearInterval(intervalId);
@@ -71,8 +76,9 @@ $(document).ready(function () {
     function recordattempt() {
         var converted = timeConverter(time);
         attempt++;
-        $("#attempts").append("<p>" + "Attempt: " + "#attempt"+ "#correct-answer" + "</p>")
+        $("#attempts").append("<p>" + "   Attempt: " + attempt + "  Answer: " + questionArray[currentQuestion].correctAnswer +"</p>")
         console.log("Attempt: " + attempt)
+        ;
     }
    
     display.innertext = "0";
@@ -86,17 +92,18 @@ $(document).ready(function () {
     var timerRunning = false;
     var time = 0;
     var attempt = 0;
-    var number = 10;
+    var timer = 2;
     var currentQuestion = 0;
+    var nextQuestion = 0;
     var correctAnswerCount = 0;
       
     //decrement counter
     function decrement() {
-        if (number > 0) {
-            number--;
-            $("#show-number").html("<h2>" + number + "</h2>");
-            console.log(number);
-            display.innerHTML = number;
+        if (timer > 0) {
+            timer--;
+            $("#show-timer").html("<h2>" + timer + "</h2>");
+            console.log(timer);
+            display.innerHTML = timer;
         } else {
             stop();
             console.log("Times Up!")
@@ -107,13 +114,11 @@ $(document).ready(function () {
         }
     }
    
-
-
     function reset() {
         time = 0;
-        attempt++;
         display.innerHTML = "0";
         $("#display").text("");
+        nextquestion(questionArray[currentQuestion].ques++);
           } 
 
     function timeConverter(t) {

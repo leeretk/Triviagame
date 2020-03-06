@@ -12,15 +12,6 @@ $(document).ready(function () {
 
    correctAnswer = document.getElementById("correct-answer");
 
-   
-   
-    // var correctAnswerOne = document.getElementById("correct-answer-one");
-    // var correctAnswerTwo = document.getElementById("correct-answer-two");
-    // var correctAnswerThree = document.getElementById("correct-answer-three");
-    // var correctAnswerFour = document.getElementById("correct-answer-four");
-
-//array with question, possible answer choices and correct answer.
-
     var questionArray = [
         {
             ques: "Who is Dumbledore?",
@@ -40,7 +31,8 @@ $(document).ready(function () {
             correctAnswer: "Hagrid's Guard Dog"},
     ]
 
-    display.innertext = "10:00";
+
+    display.innertext = "0";
     $("#lap").on("click", recordLap);
     $("#stop").on("click", stop);
     $("#reset").on("click", reset);

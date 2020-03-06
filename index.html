@@ -13,18 +13,21 @@
 
 <body>
 
-    <header>TRIVIA GAME</header>
+    <header class="container-fluid">TRIVIA GAME</header>
 
-    <div class="container playButtonDiv">
+
+
+
+    <div class="container-fluid" id="display"></div>
+
+    <div class="class="container-fluid" id="question"></div>
+    
+    <div class="container-fluid" playButtonDiv">
         <button id="start">Play Game</button>
     </div>
 
-    <div class="container" id="display"></div>
-
-    <div class="container" id="question"></div>
-
-    <div class="container button-wrapper">
         <div class="row">
+           
             <div class="col-sm-5">
                 <div class="card border-secondary mb-3">
                     <div class="card-body">
@@ -33,11 +36,12 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-sm-5">
                 <div cclass="card border-secondary mb-3">
                     <div class="card-body">
                         <p class="card-text" id="possible-answer-two"></p>
-                        <button class="btn btn-primary"style="color: gray">Q2</button>
+                        <button class="btn btn-primary">Q2</button>
                     </div>
                 </div>
             </div>
@@ -57,7 +61,7 @@
                     <div class="card-body">
                         <p class="card-text" id="possible-answer-four">
                             <p>
-                                <button class="btn btn-primary" style="color: gray">Q4</button>
+                                <button class="btn btn-primary">Q4</button>
                     </div>
                 </div>
             </div>

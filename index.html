@@ -15,23 +15,19 @@
 
     <header class="container-fluid">TRIVIA GAME</header>
 
+    <div class="displayDiv container-fluid" id="display"></div>
 
-
-
-    <div class="container-fluid" id="display"></div>
-
-    <div class="class="container-fluid" id="question"></div>
+    <div class="questionDiv container-fluid" id="questions"></div>
     
     <div class="container-fluid" playButtonDiv">
-        <button id="start">Play Game</button>
+        <button class="card-text playButtonDiv" id="start">Play Game</button>
     </div>
 
         <div class="row">
-           
             <div class="col-sm-5">
                 <div class="card border-secondary mb-3">
                     <div class="card-body">
-                        <p class="card-text" id="possible-answer-one"></p>
+                        <p class="card-text" id="answer-one"></p>
                         <button class="btn btn-primary">Q1</button>
                     </div>
                 </div>
@@ -40,8 +36,8 @@
             <div class="col-sm-5">
                 <div cclass="card border-secondary mb-3">
                     <div class="card-body">
-                        <p class="card-text" id="possible-answer-two"></p>
-                        <button class="btn btn-primary">Q2</button>
+                        <p class="card-text" id="answer-two"></p>
+                        <button class="btn btn-primary">Q2</button> 
                     </div>
                 </div>
             </div>
@@ -51,7 +47,7 @@
             <div class="col-sm-5">
                 <div class="card border-secondary mb-3" >
                     <div class="card-body">
-                        <p class="card-text" id="possible-answer-three"></p>
+                        <p class="card-text" id="answer-three"></p>
                         <button class="btn btn-primary">Q3</button>
                     </div>
                 </div>
@@ -59,9 +55,8 @@
             <div class="col-sm-5">
                 <div class="card border-secondary mb-3">
                     <div class="card-body">
-                        <p class="card-text" id="possible-answer-four">
-                            <p>
-                                <button class="btn btn-primary">Q4</button>
+                        <p class="card-text" id="answer-four"><p>
+                        <button class="btn btn-primary">Q4</button>
                     </div>
                 </div>
             </div>

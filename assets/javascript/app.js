@@ -4,15 +4,15 @@
 
 $(document).ready(function () {
     var display = document.getElementById("display");
-    var question = document.getElementById("question");
+    var question = document.getElementById("questions");
     var correctAnswer = document.getElementById("correctAnswer");
     console.log(question);
 
  //   
-    var possibleAnswerOne = document.getElementById("possible-answer-one");
-    var possibleAnswerTwo = document.getElementById("possible-answer-two");
-    var possibleAnswerThree = document.getElementById("possible-answer-three");
-    var possibleAnswerFour = document.getElementById("possible-answer-four");
+    var possibleAnswerOne = document.getElementById("answer-one");
+    var possibleAnswerTwo = document.getElementById("answer-two");
+    var possibleAnswerThree = document.getElementById("answer-three");
+    var possibleAnswerFour = document.getElementById("answer-four");
 
     // var correctAnswerOne = document.getElementById("correct-answer-one");
     // var correctAnswerTwo = document.getElementById("correct-answer-two");
@@ -21,7 +21,7 @@ $(document).ready(function () {
 
 //array with question, possible answer choices and correct answer.
 
-    var questions = [
+    var questionArray = [
         {
             ques: "Who is Dumbledore?",
             choices: ["Headmaster", "Defense Against the Dark Arts Teacher", "Evil Wizard", "Harry's Father"],
@@ -67,23 +67,22 @@ $(document).ready(function () {
         clearInterval(intervalId);
         intervalId = setInterval(decrement, 1000);
 
-        question.innerHTML = questions[currentQuestion].ques;
-        console.log(questions[currentQuestion].ques);
+        questionArray.innerHTML = questionArray[currentQuestion].ques;
+        console.log(questionArray[currentQuestion].ques);
 
     //these are the values that appear in the buttons
-        possibleAnswerOne.innerHTML = questions[currentQuestion].choices[0]; 
-        possibleAnswerTwo.innerHTML = questions[currentQuestion].choices[1];
-        possibleAnswerThree.innerHTML = questions[currentQuestion].choices[2];
-        possibleAnswerFour.innerHTML = questions[currentQuestion].choices[3];
-     
-               
-        console.log(questions[currentQuestion].choices[0]);
-        console.log(questions[currentQuestion].choices[1]);
-        console.log(questions[currentQuestion].choices[2]);
-        console.log(questions[currentQuestion].choices[3]);
+        possibleAnswerOne.innerHTML = questionArray[currentQuestion].choices[0]; 
+        possibleAnswerTwo.innerHTML = questionArray[currentQuestion].choices[1];
+        possibleAnswerThree.innerHTML = questionArray[currentQuestion].choices[2];
+        possibleAnswerFour.innerHTML = questionArray[currentQuestion].choices[3];
+                    
+        console.log(questionArray[currentQuestion].choices[0]);
+        console.log(questionArray[currentQuestion].choices[1]);
+        console.log(questionArray[currentQuestion].choices[2]);
+        console.log(questionArray[currentQuestion].choices[3]);
 
-        question.innerHTML = questions[currentQuestion].correctAnswer;  
-        console.log(questions[currentQuestion].correctAnswer);
+        questionArray.innerHTML = questionArray[currentQuestion].correctAnswer;  
+        console.log(questionArray[currentQuestion].correctAnswer);
 
         };
 

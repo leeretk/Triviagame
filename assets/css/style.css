@@ -4,6 +4,7 @@ body {
   height: 100%;
   width: 992px;
   text-align: center;
+  position: relative;
   }
 
 header {  
@@ -39,8 +40,6 @@ h3 {
   background-color: #7f0909;
   color: #ffc500;
 }
-
-
 
 p {
   font-size: 25px;
@@ -104,9 +103,6 @@ p {
 
 /************BUTTON DEFINITIONS ******************/
 
-.button-wrapper {
-
-}
 
 button {
   position: left;
@@ -116,6 +112,7 @@ button {
   width: 100px;
   height: 50px;
   margin: 20px;
+
 }
 
 button:hover {
@@ -127,6 +124,24 @@ button:hover {
   color: #ffc500 ;
 }
 
+
+.playButtonDiv {
+  position: center;
+  color: white;
+  background:#7f0909 ;
+  columns: #ffc500;;
+  height: 50px;
+  margin: 20px;
+}
+
+.button-wrapper {
+  position: center;
+  color: white;
+  background:#7f0909 ;
+  columns: #ffc500;;
+  height: 50px;
+  margin: 20px;
+}
 
 /************ IMAGES ******************/
 img {

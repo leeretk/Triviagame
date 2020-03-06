@@ -3,16 +3,12 @@
 //window.onload = function() 
 
 $(document).ready(function () {
-
-
-
     
     var display = document.getElementById("display");
     var AnswerOne = document.getElementById("answer-one");
     var AnswerTwo = document.getElementById("answer-two");
     var AnswerThree = document.getElementById("answer-three");
     var AnswerFour = document.getElementById("answer-four");
-
 
 
     var questionArray = [
@@ -69,16 +65,16 @@ $(document).ready(function () {
         clearInterval(intervalId);
         timerRunning = false;
     }
-        
+    
+    correctAnswer = document.getElementById("correct-answer");
+    
     function recordattempt() {
         var converted = timeConverter(time);
         attempt++;
-        $("#attempts").append("<p>attempt " + attempt + " : " + converted + "</p>");
-        console.log("Attemps: " + recordattempt)
+        $("#attempts").append("<p>" + "Attempt: " + "#attempt"+ "#correct-answer" + "</p>")
+        console.log("Attempt: " + attempt)
     }
-
-    correctAnswer = document.getElementById("correct-answer");
-
+   
     display.innertext = "0";
     $("#playgame").on("click", playgame);
     $("#stop").on("click", stop);
@@ -104,12 +100,15 @@ $(document).ready(function () {
         } else {
             stop();
             console.log("Times Up!")
-            $("#times-up").html("<h3>" + "Times Up!" + "</h23" + correctAnswer);
+            $("#times-up").html("<h3>" + "Times Up!" + "</h23");
             recordattempt();
+            reset();
             //alert("Times Up!");
         }
     }
-            
+   
+
+
     function reset() {
         time = 0;
         attempt++;

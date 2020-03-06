@@ -76,7 +76,7 @@ $(document).ready(function () {
     function recordattempt() {
         var converted = timeConverter(time);
         attempt++;
-        $("#attempts").append("<p>" + "   Attempt: " + attempt + "  Answer: " + questionArray[currentQuestion].correctAnswer + "</p>");
+        $("#attempts").append("<p>" + "   Attempt: " + attempt + "  Answer: " + "</p>");
         console.log("Attempt: " + attempt);
     }
 

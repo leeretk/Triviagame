@@ -15,29 +15,29 @@
 
     <header class="container-fluid">TRIVIA GAME</header>
 
-    <div class="displayDiv container-fluid" id="display"></div>
+    <div class="displayDiv" id="display"></div>
 
-    <div class="questionDiv container-fluid" id="questions"></div>
+    <div class="questionDiv" id="questions"></div>
     
-    <div class="container-fluid" playButtonDiv">
+    <div class="playButtonDiv">
         <button class="card-text playButtonDiv" id="start">Play Game</button>
     </div>
 
         <div class="row">
             <div class="col-sm-5">
-                <div class="card border-secondary mb-3">
+                <div class="card secondary mb-3">
                     <div class="card-body">
                         <p class="card-text" id="answer-one"></p>
-                        <button class="btn btn-primary">Q1</button>
+                        <button type="button" class="btn btn-primary">Q1</button>
                     </div>
                 </div>
             </div>
 
             <div class="col-sm-5">
-                <div cclass="card border-secondary mb-3">
+                <div cclass="card secondary mb-3">
                     <div class="card-body">
                         <p class="card-text" id="answer-two"></p>
-                        <button class="btn btn-primary">Q2</button> 
+                        <button type="button" class="btn btn-primary">Q2</button> 
                     </div>
                 </div>
             </div>
@@ -45,18 +45,18 @@
 
         <div class="row">
             <div class="col-sm-5">
-                <div class="card border-secondary mb-3" >
+                <div class="card secondary mb-3" >
                     <div class="card-body">
                         <p class="card-text" id="answer-three"></p>
-                        <button class="btn btn-primary">Q3</button>
+                        <button type="button" class="btn btn-primary">Q3</button>
                     </div>
                 </div>
             </div>
             <div class="col-sm-5">
-                <div class="card border-secondary mb-3">
+                <div class="card secondary mb-3">
                     <div class="card-body">
                         <p class="card-text" id="answer-four"><p>
-                        <button class="btn btn-primary">Q4</button>
+                        <button type="button" class="btn btn-primary">Q4</button>
                     </div>
                 </div>
             </div>
@@ -64,10 +64,10 @@
     </div>
     </div>
     <div class="container">
-        <div id="correct-answer-one"></div>
-        <div id="correct-answer-two"></div>
-        <div id="correct-answer-three"></div>
-        <div id="correct-answer-four"></div>
+        <div id="answer-one"></div>
+        <div id="answer-two"></div>
+        <div id="answer-three"></div>
+        <div id="answer-four"></div>
     </div>
     <div id="center-text container">
         <button type="button" id="stop">Stop</button>

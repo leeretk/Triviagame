@@ -5,14 +5,17 @@
 $(document).ready(function () {
     var display = document.getElementById("display");
     var question = document.getElementById("questions");
-    var correctAnswer = document.getElementById("correctAnswer");
     console.log(question);
+    
+    var AnswerOne = document.getElementById("answer-one");
+    var AnswerTwo = document.getElementById("answer-two");
+    var AnswerThree = document.getElementById("answer-three");
+    var AnswerFour = document.getElementById("answer-four");
 
- //   
-    var possibleAnswerOne = document.getElementById("answer-one");
-    var possibleAnswerTwo = document.getElementById("answer-two");
-    var possibleAnswerThree = document.getElementById("answer-three");
-    var possibleAnswerFour = document.getElementById("answer-four");
+    var checkAnswer = 
+
+    correctAnswer = document.getElementById("correct-answer");
+
 
     // var correctAnswerOne = document.getElementById("correct-answer-one");
     // var correctAnswerTwo = document.getElementById("correct-answer-two");
@@ -71,10 +74,10 @@ $(document).ready(function () {
         console.log(questionArray[currentQuestion].ques);
 
     //these are the values that appear in the buttons
-        possibleAnswerOne.innerHTML = questionArray[currentQuestion].choices[0]; 
-        possibleAnswerTwo.innerHTML = questionArray[currentQuestion].choices[1];
-        possibleAnswerThree.innerHTML = questionArray[currentQuestion].choices[2];
-        possibleAnswerFour.innerHTML = questionArray[currentQuestion].choices[3];
+        AnswerOne.innerHTML = questionArray[currentQuestion].choices[0]; 
+        AnswerTwo.innerHTML = questionArray[currentQuestion].choices[1];
+        AnswerThree.innerHTML = questionArray[currentQuestion].choices[2];
+        AnswerFour.innerHTML = questionArray[currentQuestion].choices[3];
                     
         console.log(questionArray[currentQuestion].choices[0]);
         console.log(questionArray[currentQuestion].choices[1]);
@@ -128,7 +131,7 @@ $(document).ready(function () {
         return minutes + ":" + seconds;
     };
 
-    //function checkAnswer() {
+    //function checkAnswers() {
         
 
         

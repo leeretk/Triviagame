@@ -3,7 +3,7 @@
 //window.onload = function() 
 
 $(document).ready(function () {
-    
+
     var display = document.getElementById("display");
     var AnswerOne = document.getElementById("answer-one");
     var AnswerTwo = document.getElementById("answer-two");
@@ -61,7 +61,7 @@ $(document).ready(function () {
     };
 
 
-    function nextquestion() { 
+    function nextquestion() {
         $("#next-question").on("click", questionArray[currentQuestion].ques++);
         console.log("Next Question :" + questionArray[currentQuestion].ques++);
     }
@@ -70,17 +70,16 @@ $(document).ready(function () {
         clearInterval(intervalId);
         timerRunning = false;
     }
-    
+
     correctAnswer = document.getElementById("correct-answer");
-    
+
     function recordattempt() {
         var converted = timeConverter(time);
         attempt++;
-        $("#attempts").append("<p>" + "   Attempt: " + attempt + "  Answer: " + questionArray[currentQuestion].correctAnswer +"</p>")
-        console.log("Attempt: " + attempt)
-        ;
+        $("#attempts").append("<p>" + "   Attempt: " + attempt + "  Answer: " + questionArray[currentQuestion].correctAnswer + "</p>");
+        console.log("Attempt: " + attempt);
     }
-   
+
     display.innertext = "0";
     $("#playgame").on("click", playgame);
     $("#stop").on("click", stop);
@@ -92,70 +91,62 @@ $(document).ready(function () {
     var timerRunning = false;
     var time = 0;
     var attempt = 0;
-    var timer = 2;
+    var timer = 4;
     var currentQuestion = 0;
+    var incorrectAnswerCount=0;
     var nextQuestion = 0;
     var correctAnswerCount = 0;
-      
+
     //decrement counter
     function decrement() {
         if (timer > 0) {
             timer--;
-            $("#show-timer").html("<h2>" + timer + "</h2>");
+            $("#show-timer").html("<h1>" + timer + "</h1>");
             console.log(timer);
             display.innerHTML = timer;
         } else {
             stop();
             console.log("Times Up!")
             $("#times-up").html("<h3>" + "Times Up!" + "</h23");
-            recordattempt();
-            reset();
             //alert("Times Up!");
         }
     }
-   
+
     function reset() {
         time = 0;
         display.innerHTML = "0";
         $("#display").text("");
-        nextquestion(questionArray[currentQuestion].ques++);
-          } 
+        recordattempt();
+            }
 
     function timeConverter(t) {
-            var minutes = Math.floor(t / 60);
-            var seconds = t - (minutes * 60);
-            if (seconds < 10) {
-                seconds = "0" + seconds;
-            }
-            if (minutes === 0) {
-                minutes = "00";
-            } else if (minutes < 10) {
-                minutes = "0" + minutes;
-            }
-            return minutes + ":" + seconds;
+        var minutes = Math.floor(t / 60);
+        var seconds = t - (minutes * 60);
+        if (seconds < 10) {
+            seconds = "0" + seconds;
         }
+        if (minutes === 0) {
+            minutes = "00";
+        } else if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        return minutes + ":" + seconds;
+    }
 
+    function checkAnswers() {
 
-
-
-
-
-        //function checkAnswers() {}
-
-
-
-        //     if (possibleAnswerOne === correctAnswer) {
-        //         console.log("You picked the correct answer!" + correctAnswer)
-        //         correctAnswerCount++;
-        //         console.log(correctAnswerCount);
-        //         console.log(possibleAnswerOne);
-        //         console.log(correctAnswer);
-        //         stop();
-        //     } else {
-        //         console.log("Incorrect Answer Try Again!");
-        //         console.log(correctAnswerCount);
-        //         stop();
-        //     }
-
-
-    });
+        if (correctAnswer === AnswerOne) {
+           
+            console.log("You picked the correct answer!" + correctAnswer)
+            correctAnswerCount++;
+            console.log("Correct Count " + correctAnswerCount);
+            console.log(correctAnswerCount);
+              reset();
+        } else {
+            incorrectAnswerCount++;
+            console.log("Incorrect Count " + incorrectAnswerCount);
+            console.log("Incorrect Answer Try Again!");
+            reset();
+        }
+    }
+});

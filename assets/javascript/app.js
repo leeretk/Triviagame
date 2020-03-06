@@ -4,19 +4,16 @@
 
 $(document).ready(function () {
     var display = document.getElementById("display");
-    var question = document.getElementById("questions");
-    console.log(question);
-    
+  
     var AnswerOne = document.getElementById("answer-one");
     var AnswerTwo = document.getElementById("answer-two");
     var AnswerThree = document.getElementById("answer-three");
     var AnswerFour = document.getElementById("answer-four");
 
-    var checkAnswer = 
+   correctAnswer = document.getElementById("correct-answer");
 
-    correctAnswer = document.getElementById("correct-answer");
-
-
+   
+   
     // var correctAnswerOne = document.getElementById("correct-answer-one");
     // var correctAnswerTwo = document.getElementById("correct-answer-two");
     // var correctAnswerThree = document.getElementById("correct-answer-three");
@@ -70,25 +67,29 @@ $(document).ready(function () {
         clearInterval(intervalId);
         intervalId = setInterval(decrement, 1000);
 
+    //current Question 1st record in console.
         questionArray.innerHTML = questionArray[currentQuestion].ques;
-        console.log(questionArray[currentQuestion].ques);
+        console.log("Current Question :"  + questionArray[currentQuestion].ques);
 
-    //these are the values that appear in the buttons
+
+    //Possible Answers to the Current Question: these are the values that appear in the buttons
         AnswerOne.innerHTML = questionArray[currentQuestion].choices[0]; 
         AnswerTwo.innerHTML = questionArray[currentQuestion].choices[1];
         AnswerThree.innerHTML = questionArray[currentQuestion].choices[2];
         AnswerFour.innerHTML = questionArray[currentQuestion].choices[3];
                     
-        console.log(questionArray[currentQuestion].choices[0]);
-        console.log(questionArray[currentQuestion].choices[1]);
-        console.log(questionArray[currentQuestion].choices[2]);
-        console.log(questionArray[currentQuestion].choices[3]);
+        console.log("Answer One: " + questionArray[currentQuestion].choices[0]);
+        console.log("Answer two: " + questionArray[currentQuestion].choices[1]);
+        console.log("Answer three: " + questionArray[currentQuestion].choices[2]);
+        console.log("Answer four: " + questionArray[currentQuestion].choices[3]);
+
+    //current Question - Correct Answer
 
         questionArray.innerHTML = questionArray[currentQuestion].correctAnswer;  
-        console.log(questionArray[currentQuestion].correctAnswer);
-
+        console.log("Correct Answer: " + questionArray[currentQuestion].correctAnswer);
         };
 
+    //decrement counter
     function decrement() {
         if (number > 0) {
             number--;
@@ -98,6 +99,7 @@ $(document).ready(function () {
         } else {
             stop();
             console.log("Times Up!")
+            $("#times-up").html("<h2>" + "Times Up!" + "</h2>");
             //alert("Times Up!");
         }
     };
@@ -107,9 +109,9 @@ $(document).ready(function () {
         timerRunning = false;
    };
 
-    function recordLap() {
-        var converted = timeConverter(time);
-        lap++;
+   function recordLap() {
+    var converted = timeConverter(time);
+    lap++;
 
         //var newgame
         //
@@ -131,6 +133,7 @@ $(document).ready(function () {
         return minutes + ":" + seconds;
     };
 
+    
     //function checkAnswers() {
         
 

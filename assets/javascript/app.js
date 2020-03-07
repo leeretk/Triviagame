@@ -9,7 +9,6 @@ $(document).ready(function () {
     var answerTwo = document.getElementById("answer-two");
     var answerThree = document.getElementById("answer-three");
     var answerFour = document.getElementById("answer-four");
-    var mySound;
 
 
     var questionArray = [
@@ -141,7 +140,7 @@ $(document).ready(function () {
         }
         return minutes + ":" + seconds;
     }
-    $("#display").html("<h3>" + "#display" + "</h23");
+    $("#display").html("<h3>" + "display" + "</h23");
 
 
     function checkAnswers() {

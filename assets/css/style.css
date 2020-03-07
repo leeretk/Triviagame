@@ -23,6 +23,8 @@ h1 {
   font-size: 75px;
   text-align: center;
   text-align: center;
+  background-color: #7f0909;
+  color: #ffc500;
   }
 
 h2 {
@@ -79,7 +81,6 @@ body {
     width: 992px;
     }
 
-
   p {
     font-size: 25px;
     font-weight: normal;
@@ -95,18 +96,13 @@ body {
     overflow: auto;
     background: dimgray;
   }
-  
 
 /******************************/
-
 .active {
   cursor:default;
 }
 
-
 /************BUTTON DEFINITIONS ******************/
-
-
 
 button {
   position: left;

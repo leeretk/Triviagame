@@ -5,28 +5,36 @@
 <head>
     <meta charset="UTF-8">
     <title>TRIVIA</title>
-    <link rel="stylesheet" href="assets\css\style.css">
+    
+    <link type="text/css" rel="stylesheet" 
+    
+    href="assets\css\style.css">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+    
 </head>
 
 <body id="center-text">
 
     <header class="container-fluid">TRIVIA GAME</header>
 
-    <button class="playButtonDiv card-text playButtonDiv" id="playgame">Play Game</button>
-    
-    <div class="displayDiv" id="display"><h1 ></h1></div>
 
-    <div class="questionDiv" id="current-question"></div>
     
+    <!-- <nav>
+        <a href="#" onmousedown=> </a></a>
+        <a href="#" onmousedown="bleep.play()"></a>
+    </nav> -->
+
+    <div class="container" id="current-question"></div>
+    <div class="container" id="display"><h1 ></h1></div>
         <div class="row">
             <div class="col-sm-5">
                 <div class="card secondary mb-3">
                     <div class="card-body">
                         <p class="card-text" id="answer-one"></p>
-                        <button type="button" class="btn btn-primary">Q1</button>
+                        <button type="button" id="answer-one" class="btn btn-primary">Q1</button>
                     </div>
                 </div>
             </div>
@@ -35,7 +43,7 @@
                 <div cclass="card secondary mb-3">
                     <div class="card-body">
                         <p class="card-text" id="answer-two"></p>
-                        <button type="button" class="btn btn-primary">Q2</button> 
+                        <button type="button" id="answer-two" class="btn btn-primary">Q2</button> 
                     </div>
                 </div>
             </div>
@@ -46,7 +54,7 @@
                 <div class="card secondary mb-3" >
                     <div class="card-body">
                         <p class="card-text" id="answer-three"></p>
-                        <button type="button" class="btn btn-primary">Q3</button>
+                        <button type="button" id="answer-three" class="btn btn-primary">Q3</button>
                     </div>
                 </div>
             </div>
@@ -54,7 +62,7 @@
                 <div class="card secondary mb-3">
                     <div class="card-body">
                         <p class="card-text" id="answer-four"><p>
-                        <button type="button" class="btn btn-primary">Q4</button>
+                        <button type="button" id="answer-four" class="btn btn-primary">Q4</button>
                     </div>
                 </div>
             </div>
@@ -70,7 +78,9 @@
 
     <div class="container" role="alert" id="times-up"></div>
 
-    <div clas="questionResults" id="attempts"></div>
+    <button class="playButtonDiv card-text playButtonDiv" id="playgame">Play Game</button>
+
+    <div class="questionResults" id="attempts"></div>
 
     <script type="text/javascript" src="assets\javascript\app.js"></script>
 

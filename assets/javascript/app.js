@@ -72,6 +72,7 @@ $(document).ready(function () {
     }
 
     function stop() {
+        event.preventDefault();
         clearInterval(intervalId);
         timerRunning = false;
     }
@@ -144,7 +145,7 @@ $(document).ready(function () {
 
 
     function checkAnswers() {
-
+        event.preventDefault();
         if (correctAnswer === AnswerOne) {
                console.log("You picked the correct answer!" + correctAnswer)
                correctAnswerCount++;

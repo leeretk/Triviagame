@@ -38,7 +38,7 @@ $(document).ready(function () {
         // var bleep = new audio();
         // bleep.src="8d82b5_Harry_Potter_Intro_Sound_Effect.mp3";
         event.preventDefault();
-       
+        
         timerRunning = true;
         display.innerHTML = "10";
         clearInterval(intervalId);
@@ -48,6 +48,7 @@ $(document).ready(function () {
         questionArray.innerHTML = questionArray[currentQuestion].ques;
         console.log("Current Question :" + questionArray[currentQuestion].ques);
 
+       
         //Possible Answers to the Current Question: these are the values that appear in the buttons
         answerOne.innerHTML = questionArray[currentQuestion].choices[0];
         answerTwo.innerHTML = questionArray[currentQuestion].choices[1];
@@ -58,6 +59,8 @@ $(document).ready(function () {
         console.log("Answer two: " + questionArray[currentQuestion].choices[1]);
         console.log("Answer three: " + questionArray[currentQuestion].choices[2]);
         console.log("Answer four: " + questionArray[currentQuestion].choices[3]);
+
+        $("#display").html("<h3>" + "display" + "</h23");
 
         //current Question - Correct Answer
         questionArray.innerHTML = questionArray[currentQuestion].correctAnswer;
@@ -140,7 +143,7 @@ $(document).ready(function () {
         }
         return minutes + ":" + seconds;
     }
-    $("#display").html("<h3>" + "display" + "</h23");
+    
 
 
     function checkAnswers() {

@@ -12,9 +12,8 @@
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
-    
 </head>
+
 
 <body id="center-text">
 
@@ -25,11 +24,12 @@
         <a href="#" onmousedown="bleep.play()"></a>
     </nav> -->
     
+    <!-- #in CSS = id -->
+
     <div id="current-question"><h3></h3></div>
     
     <div id="display"><h3></h3></div>
     
-
         <div class="row">
             <div class="col-sm-5">
                 <div class="card secondary mb-3">
@@ -63,7 +63,7 @@
                 <div class="card secondary mb-3">
                     <div class="card-body">
                         <p class="card-text" id="answer-four"><p>
-                        <button type="button" id="answer-four" class="btn btn-primary">Q4</button>
+                        <button type="button" id="answer-four button-wrapper" class="btn btn-primary">Q4</button>
                     </div>
                 </div>
             </div>
@@ -79,12 +79,13 @@
 
     <div class="container" role="alert" id="times-up"></div>
 
-    <button class="playButtonDiv card-text" id="playgame">Play Game</button>
+    <button class="card-text" id="playgame playButtonDiv ">Play Game</button>
 
     <div class="questionResults" id="attempts"></div>
-
-    <script type="text/javascript" src="assets\javascript\app.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="assets\javascript\app.js">
+</script>  
 </body>
 
 </html>
